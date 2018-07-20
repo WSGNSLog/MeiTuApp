@@ -1,31 +1,32 @@
 //
-//  BloomEffect.m
+//  HighlightShadowEffect.m
 //  MeiTuApp
 //
 //  Created by shiguang on 2018/7/19.
 //  Copyright © 2018年 shiguang. All rights reserved.
 //
 
-#import "BloomEffect.h"
-#import "UIImage+Utility.h"
+#import "HighlightShadowEffect.h"
 
-@implementation BloomEffect
+@implementation HighlightShadowEffect
 {
     UIView *_containerView;
-    UISlider *_radiusSlider;
-    UISlider *_intensitySlider;
+    
+    //UISlider *_highlightSlider;
+    UISlider *_shadowSlider;
+    //UISlider *_radiusSlider;
 }
 
 #pragma mark-
 
+
 - (id)initWithSuperView:(UIView*)superview imageViewFrame:(CGRect)frame
-//               toolInfo:(CLImageToolInfo*)info
 {
-//    self = [super initWithSuperView:superview imageViewFrame:frame toolInfo:info];
-    
+    self = [super initWithSuperView:superview imageViewFrame:frame];
     if(self){
         _containerView = [[UIView alloc] initWithFrame:superview.bounds];
         [superview addSubview:_containerView];
+        
         [self setUserInterface];
     }
     return self;
@@ -39,14 +40,15 @@
 - (UIImage*)applyEffect:(UIImage*)image
 {
     CIImage *ciImage = [[CIImage alloc] initWithImage:image];
-    CIFilter *filter = [CIFilter filterWithName:@"CIBloom" keysAndValues:kCIInputImageKey, ciImage, nil];
+    CIFilter *filter = [CIFilter filterWithName:@"CIHighlightShadowAdjust" keysAndValues:kCIInputImageKey, ciImage, nil];
     
+    //NSLog(@"%@", [filter attributes]);
     
     [filter setDefaults];
-    
-    CGFloat R = [self getRadius] * MIN(image.size.width, image.size.height) * 0.05;
-    [filter setValue:[NSNumber numberWithFloat:R] forKey:@"inputRadius"];
-    [filter setValue:[self getIntensityValue] forKey:@"inputIntensity"];
+    //[filter setValue:[NSNumber numberWithFloat:_highlightSlider.value] forKey:@"inputHighlightAmount"];
+    [filter setValue:[self getShadowValue] forKey:@"inputShadowAmount"];
+    //CGFloat R = MAX(image.size.width, image.size.height) * 0.02 * _radiusSlider.value;
+    //[filter setValue:[NSNumber numberWithFloat:R] forKey:@"inputRadius"];
     
     CIContext *context = [CIContext contextWithOptions:@{kCIContextUseSoftwareRenderer : @(NO)}];
     CIImage *outputImage = [filter outputImage];
@@ -56,30 +58,15 @@
     
     CGImageRelease(cgImage);
     
-    CGFloat dW = (result.size.width - image.size.width)/2;
-    CGFloat dH = (result.size.height - image.size.height)/2;
-    
-    CGRect rct = CGRectMake(dW, dH, image.size.width, image.size.height);
-    
-    return [result crop:rct];
+    return result;
 }
 
-- (CGFloat)getRadius
-{
-    __block CGFloat value = 0;
-    
-    safe_dispatch_sync_main(^{
-        value = self->_radiusSlider.value;
-    });
-    return value;
-}
-
-- (NSNumber*)getIntensityValue
+- (NSNumber*)getShadowValue
 {
     __block NSNumber *value = nil;
     
     safe_dispatch_sync_main(^{
-        value = [NSNumber numberWithFloat:self->_intensitySlider.value];
+        value = [NSNumber numberWithFloat:self->_shadowSlider.value];
     });
     return value;
 }
@@ -94,7 +81,7 @@
     container.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3];
     container.layer.cornerRadius = slider.height/2;
     
-    slider.continuous = NO;
+    slider.continuous = YES;
     [slider addTarget:self action:@selector(sliderDidChange:) forControlEvents:UIControlEventValueChanged];
     
     slider.maximumValue = max;
@@ -109,17 +96,13 @@
 
 - (void)setUserInterface
 {
-    _radiusSlider = [self sliderWithValue:0.5 minimumValue:0 maximumValue:1.0];
-    _radiusSlider.superview.center = CGPointMake(_containerView.width/2, _containerView.height-30);
-    
-    _intensitySlider = [self sliderWithValue:1 minimumValue:0 maximumValue:1.0];
-    _intensitySlider.superview.center = CGPointMake(_containerView.width-20, _radiusSlider.superview.top - 150);
-    _intensitySlider.superview.transform = CGAffineTransformMakeRotation(-M_PI * 90 / 180.0f);
+    _shadowSlider = [self sliderWithValue:0 minimumValue:-1 maximumValue:1];
+    _shadowSlider.superview.center = CGPointMake(_containerView.width/2, _containerView.height-30);
+   
 }
 
 - (void)sliderDidChange:(UISlider*)sender
 {
     [self.delegate effectParameterDidChange:self];
 }
-
 @end

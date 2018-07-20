@@ -15,6 +15,7 @@
 
 - (id)initWithImageEditor:(BlurFocusController *)editor;
 - (void)setup;
+- (void)cleanup;
 - (void)didSelectedMenuAtIndex:(int)index;
-
+- (void)executeWithCompletionBlock:(void(^)(UIImage *image, NSError *error, NSDictionary *userInfo))completionBlock;
 @end

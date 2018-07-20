@@ -33,6 +33,9 @@
 		E385EE11210175E200123467 /* BlurFocusController.m in Sources */ = {isa = PBXBuildFile; fileRef = E385EE0F210175E200123467 /* BlurFocusController.m */; };
 		E385EE12210175E200123467 /* BlurFocusController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E385EE10210175E200123467 /* BlurFocusController.xib */; };
 		E385EE1621017ADB00123467 /* BlurTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E385EE1521017ADB00123467 /* BlurTool.m */; };
+		E385EE1A2101915D00123467 /* AjustController.m in Sources */ = {isa = PBXBuildFile; fileRef = E385EE182101915D00123467 /* AjustController.m */; };
+		E385EE1B2101915D00123467 /* AjustController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E385EE192101915D00123467 /* AjustController.xib */; };
+		E385EE202101AAAF00123467 /* AjustmentTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E385EE1F2101AAAF00123467 /* AjustmentTool.m */; };
 		E39A571620FF12510018D5B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E39A571520FF12510018D5B5 /* AppDelegate.m */; };
 		E39A571920FF12510018D5B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E39A571820FF12510018D5B5 /* ViewController.m */; };
 		E39A571C20FF12510018D5B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E39A571A20FF12510018D5B5 /* Main.storyboard */; };
@@ -94,6 +97,11 @@
 		E385EE10210175E200123467 /* BlurFocusController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlurFocusController.xib; sourceTree = "<group>"; };
 		E385EE1421017ADB00123467 /* BlurTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlurTool.h; sourceTree = "<group>"; };
 		E385EE1521017ADB00123467 /* BlurTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlurTool.m; sourceTree = "<group>"; };
+		E385EE172101915D00123467 /* AjustController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AjustController.h; sourceTree = "<group>"; };
+		E385EE182101915D00123467 /* AjustController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AjustController.m; sourceTree = "<group>"; };
+		E385EE192101915D00123467 /* AjustController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AjustController.xib; sourceTree = "<group>"; };
+		E385EE1E2101AAAF00123467 /* AjustmentTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AjustmentTool.h; sourceTree = "<group>"; };
+		E385EE1F2101AAAF00123467 /* AjustmentTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AjustmentTool.m; sourceTree = "<group>"; };
 		E39A571120FF12510018D5B5 /* MeiTuApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeiTuApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E39A571420FF12510018D5B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E39A571520FF12510018D5B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -225,6 +233,42 @@
 				E385EE1521017ADB00123467 /* BlurTool.m */,
 			);
 			path = BlurTool;
+			sourceTree = "<group>";
+		};
+		E385EE1C210191C600123467 /* Ajustment */ = {
+			isa = PBXGroup;
+			children = (
+				E385EE1E2101AAAF00123467 /* AjustmentTool.h */,
+				E385EE1F2101AAAF00123467 /* AjustmentTool.m */,
+			);
+			path = Ajustment;
+			sourceTree = "<group>";
+		};
+		E385EE1D210191E500123467 /* PictureEffect */ = {
+			isa = PBXGroup;
+			children = (
+				E3B24B8C2101C98A00630A9E /* Text */,
+				E3B24B8B2101C98300630A9E /* Sticker */,
+				E3B24B8A2101C97B00630A9E /* Emotions */,
+				E3B24B892101C95E00630A9E /* ToneCurves */,
+				E3B24B882101C95500630A9E /* SplashTool */,
+				E3B24B872101C93D00630A9E /* ResizeTool */,
+				E3B24B862101C93500630A9E /* CropTool */,
+				E3B24B852101C92D00630A9E /* RotateTool */,
+				E385EE212101C81600123467 /* DrawTool */,
+				E385EE1C210191C600123467 /* Ajustment */,
+				E385EE1321017AC000123467 /* BlurTool */,
+				E385EDCD2100639600123467 /* EffectTool */,
+				E39A579C21002D620018D5B5 /* FilterTool */,
+			);
+			path = PictureEffect;
+			sourceTree = "<group>";
+		};
+		E385EE212101C81600123467 /* DrawTool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DrawTool;
 			sourceTree = "<group>";
 		};
 		E39A570820FF12510018D5B5 = {
@@ -673,6 +717,9 @@
 		E39A576320FF163E0018D5B5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E385EE172101915D00123467 /* AjustController.h */,
+				E385EE182101915D00123467 /* AjustController.m */,
+				E385EE192101915D00123467 /* AjustController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -730,13 +777,11 @@
 		E39A576A20FF16D00018D5B5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				E385EE1321017AC000123467 /* BlurTool */,
+				E385EE1D210191E500123467 /* PictureEffect */,
 				E385EE0521007F9000123467 /* UIImage */,
 				E385EE0021007F0A00123467 /* UIView */,
-				E385EDCD2100639600123467 /* EffectTool */,
 				E385EDC921003E6400123467 /* Bundle */,
 				E39A579D21002D710018D5B5 /* Localization */,
-				E39A579C21002D620018D5B5 /* FilterTool */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -765,6 +810,62 @@
 				E39A578F20FF3E140018D5B5 /* LocalizableTool.m */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		E3B24B852101C92D00630A9E /* RotateTool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RotateTool;
+			sourceTree = "<group>";
+		};
+		E3B24B862101C93500630A9E /* CropTool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CropTool;
+			sourceTree = "<group>";
+		};
+		E3B24B872101C93D00630A9E /* ResizeTool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ResizeTool;
+			sourceTree = "<group>";
+		};
+		E3B24B882101C95500630A9E /* SplashTool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SplashTool;
+			sourceTree = "<group>";
+		};
+		E3B24B892101C95E00630A9E /* ToneCurves */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ToneCurves;
+			sourceTree = "<group>";
+		};
+		E3B24B8A2101C97B00630A9E /* Emotions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Emotions;
+			sourceTree = "<group>";
+		};
+		E3B24B8B2101C98300630A9E /* Sticker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sticker;
+			sourceTree = "<group>";
+		};
+		E3B24B8C2101C98A00630A9E /* Text */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Text;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -833,6 +934,7 @@
 				E39A579B21002D4C0018D5B5 /* PhotoEditor.bundle in Resources */,
 				E385EE12210175E200123467 /* BlurFocusController.xib in Resources */,
 				E39A577220FF2B5C0018D5B5 /* FunctionOptionCell.xib in Resources */,
+				E385EE1B2101915D00123467 /* AjustController.xib in Resources */,
 				E39A571C20FF12510018D5B5 /* Main.storyboard in Resources */,
 				E385EDD5210065C100123467 /* EffectController.xib in Resources */,
 				E39A577720FF2FE70018D5B5 /* FilterCell.xib in Resources */,
@@ -862,12 +964,14 @@
 				E385EDDF2100696400123467 /* BaseImgAndLabelCell.m in Sources */,
 				E39A572420FF12510018D5B5 /* main.m in Sources */,
 				E385EE0B210087A200123467 /* HighlightShadowEffect.m in Sources */,
+				E385EE202101AAAF00123467 /* AjustmentTool.m in Sources */,
 				E385EDFC21007EB600123467 /* PosterizeEffect.m in Sources */,
 				E385EDCC21003E8A00123467 /* BundleTool.m in Sources */,
 				E385EDD4210065C100123467 /* EffectController.m in Sources */,
 				E385EE11210175E200123467 /* BlurFocusController.m in Sources */,
 				E385EDDA2100687200123467 /* BaseController.m in Sources */,
 				E385EDFF21007EC100123467 /* SpotEffect.m in Sources */,
+				E385EE1A2101915D00123467 /* AjustController.m in Sources */,
 				E385EDF621007E9500123467 /* HueEffect.m in Sources */,
 				E39A571620FF12510018D5B5 /* AppDelegate.m in Sources */,
 				E385EDE7210078E600123467 /* EffectBase.m in Sources */,

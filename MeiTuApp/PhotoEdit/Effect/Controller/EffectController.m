@@ -30,7 +30,7 @@ static NSString *const cellID = @"BaseCellID";
     [super viewDidLoad];
     
     self.dataSource = [NSMutableArray arrayWithObjects:
-                       @"Base",
+                       @"None",
                        @"Spot",
                        @"Hue",
                        @"HighlightShadow",
@@ -57,22 +57,25 @@ static NSString *const cellID = @"BaseCellID";
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    Class effectClass;
     
-    Class effectClass = NSClassFromString([NSString stringWithFormat:@"%@Effect",self.dataSource[indexPath.row]]);
+    effectClass = NSClassFromString([NSString stringWithFormat:@"%@Effect",self.dataSource[indexPath.row]]);
     if (indexPath.row == 0) {
-        self.imageView.image = self.showImage;
-    }else{
+        effectClass = NSClassFromString(@"EffectBase");
+    }
+//    if (indexPath.row == 0) {
+//        self.imageView.image = self.showImage;
+//    }else{
         self.selectedEffect = [[effectClass alloc]initWithSuperView:self.imageView.superview imageViewFrame:self.imageView.frame];
         self.effectBaseTool.selectedEffect = self.selectedEffect;
-    }
+//    }
 }
 - (void)setEffectBaseTool:(EffectBaseTool *)effectBaseTool{
     if(effectBaseTool != _effectBaseTool){
         [_effectBaseTool cleanup];
         _effectBaseTool = effectBaseTool;
         [_effectBaseTool setup];
-        
-//        [self swapToolBarWithEditing:(_currentTool!=nil)];
+
     }
 }
 - (void)setImage:(UIImage *)image{

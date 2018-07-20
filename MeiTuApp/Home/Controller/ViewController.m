@@ -11,10 +11,11 @@
 #import <Photos/Photos.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "FunctionOptionCell.h"
+#import "BundleTool.h"
 #import "FilterController.h"
 #import "EffectController.h"
-#import "BundleTool.h"
 #import "BlurFocusController.h"
+#import "AjustController.h"
 
 #define BottomViewHeight 120
 #define CellMargin 5
@@ -140,7 +141,13 @@ static NSString *const cellID = @"FuncOptionCell";
             break;
         case 1:
         {
+            AjustController *ajust = [[AjustController alloc]init];
+            ajust.showImage = self.photoImageV.image;
             
+            ajust.imageBlock = ^(UIImage *image) {
+                weakSelf.photoImageV.image = image;
+            };
+            [self presentViewController:ajust animated:YES completion:nil];
         }
             break;
         case 2:
