@@ -10,7 +10,7 @@
 #import "BloomEffect.h"
 #import "EffectBase.h"
 #import "EffectBaseTool.h"
-#import <AVFoundation/AVFoundation.h>
+
 
 @interface EffectController ()
 

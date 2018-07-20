@@ -30,6 +30,9 @@
 		E385EE0821007FA200123467 /* UIImage+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = E385EE0721007FA200123467 /* UIImage+Utility.m */; };
 		E385EE0B210087A200123467 /* HighlightShadowEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = E385EE0A210087A200123467 /* HighlightShadowEffect.m */; };
 		E385EE0D2100F3ED00123467 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E385EE0C2100F3E900123467 /* AVFoundation.framework */; };
+		E385EE11210175E200123467 /* BlurFocusController.m in Sources */ = {isa = PBXBuildFile; fileRef = E385EE0F210175E200123467 /* BlurFocusController.m */; };
+		E385EE12210175E200123467 /* BlurFocusController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E385EE10210175E200123467 /* BlurFocusController.xib */; };
+		E385EE1621017ADB00123467 /* BlurTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E385EE1521017ADB00123467 /* BlurTool.m */; };
 		E39A571620FF12510018D5B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E39A571520FF12510018D5B5 /* AppDelegate.m */; };
 		E39A571920FF12510018D5B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E39A571820FF12510018D5B5 /* ViewController.m */; };
 		E39A571C20FF12510018D5B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E39A571A20FF12510018D5B5 /* Main.storyboard */; };
@@ -86,6 +89,11 @@
 		E385EE09210087A200123467 /* HighlightShadowEffect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HighlightShadowEffect.h; sourceTree = "<group>"; };
 		E385EE0A210087A200123467 /* HighlightShadowEffect.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HighlightShadowEffect.m; sourceTree = "<group>"; };
 		E385EE0C2100F3E900123467 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E385EE0E210175E200123467 /* BlurFocusController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlurFocusController.h; sourceTree = "<group>"; };
+		E385EE0F210175E200123467 /* BlurFocusController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlurFocusController.m; sourceTree = "<group>"; };
+		E385EE10210175E200123467 /* BlurFocusController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlurFocusController.xib; sourceTree = "<group>"; };
+		E385EE1421017ADB00123467 /* BlurTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlurTool.h; sourceTree = "<group>"; };
+		E385EE1521017ADB00123467 /* BlurTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlurTool.m; sourceTree = "<group>"; };
 		E39A571120FF12510018D5B5 /* MeiTuApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeiTuApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E39A571420FF12510018D5B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E39A571520FF12510018D5B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -208,6 +216,15 @@
 				E385EE0721007FA200123467 /* UIImage+Utility.m */,
 			);
 			path = UIImage;
+			sourceTree = "<group>";
+		};
+		E385EE1321017AC000123467 /* BlurTool */ = {
+			isa = PBXGroup;
+			children = (
+				E385EE1421017ADB00123467 /* BlurTool.h */,
+				E385EE1521017ADB00123467 /* BlurTool.m */,
+			);
+			path = BlurTool;
 			sourceTree = "<group>";
 		};
 		E39A570820FF12510018D5B5 = {
@@ -588,6 +605,9 @@
 		E39A575B20FF16300018D5B5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E385EE0E210175E200123467 /* BlurFocusController.h */,
+				E385EE0F210175E200123467 /* BlurFocusController.m */,
+				E385EE10210175E200123467 /* BlurFocusController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -710,6 +730,7 @@
 		E39A576A20FF16D00018D5B5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E385EE1321017AC000123467 /* BlurTool */,
 				E385EE0521007F9000123467 /* UIImage */,
 				E385EE0021007F0A00123467 /* UIView */,
 				E385EDCD2100639600123467 /* EffectTool */,
@@ -810,6 +831,7 @@
 				E39A571E20FF12510018D5B5 /* Assets.xcassets in Resources */,
 				E385EDDB2100687200123467 /* BaseController.xib in Resources */,
 				E39A579B21002D4C0018D5B5 /* PhotoEditor.bundle in Resources */,
+				E385EE12210175E200123467 /* BlurFocusController.xib in Resources */,
 				E39A577220FF2B5C0018D5B5 /* FunctionOptionCell.xib in Resources */,
 				E39A571C20FF12510018D5B5 /* Main.storyboard in Resources */,
 				E385EDD5210065C100123467 /* EffectController.xib in Resources */,
@@ -827,6 +849,7 @@
 			files = (
 				E39A571920FF12510018D5B5 /* ViewController.m in Sources */,
 				E385EE0421007F3C00123467 /* UIView+Frame.m in Sources */,
+				E385EE1621017ADB00123467 /* BlurTool.m in Sources */,
 				E385EDF921007EA400123467 /* PixellateEffect.m in Sources */,
 				E385EDE321006F2B00123467 /* EffectBaseTool.m in Sources */,
 				E385EE0821007FA200123467 /* UIImage+Utility.m in Sources */,
@@ -842,6 +865,7 @@
 				E385EDFC21007EB600123467 /* PosterizeEffect.m in Sources */,
 				E385EDCC21003E8A00123467 /* BundleTool.m in Sources */,
 				E385EDD4210065C100123467 /* EffectController.m in Sources */,
+				E385EE11210175E200123467 /* BlurFocusController.m in Sources */,
 				E385EDDA2100687200123467 /* BaseController.m in Sources */,
 				E385EDFF21007EC100123467 /* SpotEffect.m in Sources */,
 				E385EDF621007E9500123467 /* HueEffect.m in Sources */,

@@ -31,7 +31,7 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="15" id="KH6-vJ-m9k"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>

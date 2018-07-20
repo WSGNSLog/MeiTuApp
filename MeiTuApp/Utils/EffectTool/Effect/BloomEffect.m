@@ -7,7 +7,6 @@
 //
 
 #import "BloomEffect.h"
-#import "UIView+Frame.h"
 #import "UIImage+Utility.h"
 
 @implementation BloomEffect

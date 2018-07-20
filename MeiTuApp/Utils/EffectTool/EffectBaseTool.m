@@ -9,12 +9,10 @@
 #import "EffectBaseTool.h"
 #import "LocalizableTool.h"
 #import "BundleTool.h"
-#import "UIImage+Utility.h"
 
 
 
-//static const CGFloat kCLImageToolAnimationDuration = 0.3;
-//static const CGFloat kCLImageToolFadeoutDuration   = 0.2;
+
 
 
 @interface EffectBaseTool()
@@ -134,5 +132,7 @@
         });
     }
 }
-
+- (void)dealloc{
+    NSLog(@"%s",__func__);
+}
 @end

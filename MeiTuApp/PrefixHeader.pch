@@ -9,6 +9,13 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
+#import <AVFoundation/AVFoundation.h>
+#import "UIImage+Utility.h"
+#import "UIView+Frame.h"
+#import "LocalizableTool.h"
+#define kCLImageToolAnimationDuration 0.3
+#define kCLImageToolFadeoutDuration 0.2
+
 #define  ScreenWidth   [UIScreen mainScreen].bounds.size.width
 #define  ScreenHeight  [UIScreen mainScreen].bounds.size.height
 

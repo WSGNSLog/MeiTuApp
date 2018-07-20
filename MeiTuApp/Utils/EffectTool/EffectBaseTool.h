@@ -10,6 +10,7 @@
 #import "EffectController.h"
 #import "EffectBase.h"
 
+
 @interface EffectBaseTool : NSObject<EffectDelegate>
 
 @property (nonatomic, strong) EffectBase *selectedEffect;

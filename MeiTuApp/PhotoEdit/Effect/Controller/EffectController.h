@@ -11,4 +11,5 @@
 @interface EffectController : BaseController
 @property (nonatomic, readonly) CGRect imageRect;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
 @end

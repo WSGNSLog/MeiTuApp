@@ -14,6 +14,7 @@
 #import "FilterController.h"
 #import "EffectController.h"
 #import "BundleTool.h"
+#import "BlurFocusController.h"
 
 #define BottomViewHeight 120
 #define CellMargin 5
@@ -154,7 +155,14 @@ static NSString *const cellID = @"FuncOptionCell";
         }
             break;
         case 3:
-        {}
+        {
+            BlurFocusController *blur = [[BlurFocusController alloc]init];
+            blur.showImage = self.photoImageV.image;
+            blur.imageBlock = ^(UIImage *image) {
+                weakSelf.photoImageV.image = image;
+            };
+            [self presentViewController:blur animated:YES completion:nil];
+        }
             break;
         case 4:
         {}
