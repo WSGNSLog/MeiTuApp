@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YmG-s3-3Bo" customClass="FunctionOptionCell">
+            <rect key="frame" x="0.0" y="0.0" width="233" height="252"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="233" height="252"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mO3-IG-UtU">
+                        <rect key="frame" x="0.5" y="5" width="232" height="232"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="mO3-IG-UtU" secondAttribute="height" multiplier="1:1" id="rHG-jB-tTg"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2R-vs-CeZ">
+                        <rect key="frame" x="0.0" y="237" width="233" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="KH6-vJ-m9k"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="m2R-vs-CeZ" secondAttribute="bottom" id="Cbx-Jx-2bo"/>
+                <constraint firstItem="mO3-IG-UtU" firstAttribute="top" secondItem="YmG-s3-3Bo" secondAttribute="top" constant="5" id="DOX-sE-nZS"/>
+                <constraint firstItem="m2R-vs-CeZ" firstAttribute="leading" secondItem="YmG-s3-3Bo" secondAttribute="leading" id="WLR-O0-2Kf"/>
+                <constraint firstAttribute="trailing" secondItem="m2R-vs-CeZ" secondAttribute="trailing" id="fsk-eb-ftK"/>
+                <constraint firstItem="mO3-IG-UtU" firstAttribute="centerX" secondItem="YmG-s3-3Bo" secondAttribute="centerX" id="rl4-GU-Cr1"/>
+                <constraint firstItem="m2R-vs-CeZ" firstAttribute="top" secondItem="mO3-IG-UtU" secondAttribute="bottom" id="sfp-Lq-XMM"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="hge-pA-NUA"/>
+            <size key="customSize" width="233" height="252"/>
+            <connections>
+                <outlet property="funcImgView" destination="mO3-IG-UtU" id="88M-Pa-A0h"/>
+                <outlet property="funcNameLabel" destination="m2R-vs-CeZ" id="kYS-y5-Khk"/>
+            </connections>
+            <point key="canvasLocation" x="-237.5" y="-196"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,166 @@
+
+/* No comment provided by engineer. */
+"CLAdjustmentTool_DefaultTitle" = "调整";
+
+/* No comment provided by engineer. */
+"CLBloomEffect_DefaultTitle" = "泛光";
+
+/* No comment provided by engineer. */
+"CLBlurEffect_DefaultTitle" = "模糊与聚焦";
+
+/* No comment provided by engineer. */
+"CLBlurEffect_MenuItemBand" = "横线";
+
+/* No comment provided by engineer. */
+"CLBlurEffect_MenuItemCircle" = "圆";
+
+/* No comment provided by engineer. */
+"CLBlurEffect_MenuItemNormal" = "普通";
+
+/* No comment provided by engineer. */
+"CLClippingTool_DefaultTitle" = "裁剪";
+
+/* No comment provided by engineer. */
+"CLClippingTool_ItemMenuCustom" = "自定义";
+
+/* No comment provided by engineer. */
+"CLDefaultChromeFilter_DefaultTitle" = "铬黄";
+
+/* No comment provided by engineer. */
+"CLDefaultCurveFilter_DefaultTitle" = "曲线";
+
+/* No comment provided by engineer. */
+"CLDefaultEmptyFilter_DefaultTitle" = "无";
+
+/* No comment provided by engineer. */
+"CLDefaultFadeFilter_DefaultTitle" = "褪色";
+
+/* No comment provided by engineer. */
+"CLDefaultInstantFilter_DefaultTitle" = "怀旧";
+
+/* No comment provided by engineer. */
+"CLDefaultInvertFilter_DefaultTitle" = "反转";
+
+/* No comment provided by engineer. */
+"CLDefaultLinearFilter_DefaultTitle" = "线性";
+
+/* No comment provided by engineer. */
+"CLDefaultMonoFilter_DefaultTitle" = "单色";
+
+/* No comment provided by engineer. */
+"CLDefaultNoirFilter_DefaultTitle" = "黑白";
+
+/* No comment provided by engineer. */
+"CLDefaultProcessFilter_DefaultTitle" = "冲印";
+
+/* No comment provided by engineer. */
+"CLDefaultSepiaFilter_DefaultTitle" = "棕镜";
+
+/* No comment provided by engineer. */
+"CLDefaultTonalFilter_DefaultTitle" = "色调";
+
+/* No comment provided by engineer. */
+"CLDefaultTransferFilter_DefaultTitle" = "岁月";
+
+/* No comment provided by engineer. */
+"CLDefaultVignetteFilter_DefaultTitle" = "晕影";
+
+/* No comment provided by engineer. */
+"CLDrawTool_DefaultTitle" = "绘制";
+
+/* No comment provided by engineer. */
+"CLEffectBase_DefaultTitle" = "无";
+
+/* No comment provided by engineer. */
+"CLEffectTool_DefaultTitle" = "效果";
+
+/* No comment provided by engineer. */
+"CLFilterTool_DefaultTitle" = "滤镜";
+
+/* No comment provided by engineer. */
+"CLGloomEffect_DefaultTitle" = "阴影";
+
+/* No comment provided by engineer. */
+"CLHighlightSadowEffect_DefaultTitle" = "高亮";
+
+/* No comment provided by engineer. */
+"CLHueEffect_DefaultTitle" = "色相";
+
+/* No comment provided by engineer. */
+"CLImageEditor_BackBtnTitle" = "返回";
+
+/* No comment provided by engineer. */
+"CLImageEditor_DefaultTitle" = "编辑";
+
+/* No comment provided by engineer. */
+"CLImageEditor_OKBtnTitle" = "确定";
+
+/* No comment provided by engineer. */
+"CLPixellateEffect_DefaultTitle" = "像素化";
+
+/* No comment provided by engineer. */
+"CLPosterizeEffect_DefaultTitle" = "色调分离";
+
+/* No comment provided by engineer. */
+"CLResizeTool_DefaultTitle" = "调整";
+
+/* No comment provided by engineer. */
+"CLResizeTool_InfoPanelTextNewSize" = "新图片尺寸:";
+
+/* No comment provided by engineer. */
+"CLResizeTool_InfoPanelTextOriginalSize" = "原图片尺寸:";
+
+/* No comment provided by engineer. */
+"CLRotateTool_DefaultTitle" = "旋转";
+
+/* No comment provided by engineer. */
+"CLRotateTool_MenuItemFlipTitle1" = " ";
+
+/* No comment provided by engineer. */
+"CLRotateTool_MenuItemFlipTitle2" = " ";
+
+/* No comment provided by engineer. */
+"CLRotateTool_MenuItemRotateTitle" = " ";
+
+/* No comment provided by engineer. */
+"CLSplashTool_DefaultTitle" = "喷溅";
+
+/* No comment provided by engineer. */
+"CLSpotEffect_DefaultTitle" = "聚光";
+
+/* No comment provided by engineer. */
+"CLStickerTool_DefaultTitle" = "贴纸";
+
+/* No comment provided by engineer. */
+"CLEmoticonTool_DefaultTitle" = "表情";
+
+/* No comment provided by engineer. */
+"CLTextTool_DefaultTitle" = "文本";
+
+/* No comment provided by engineer. */
+"CLTextTool_EmptyText" = "文本";
+
+/* No comment provided by engineer. */
+"CLTextTool_MenuItemAlignCenter" = " ";
+
+/* No comment provided by engineer. */
+"CLTextTool_MenuItemAlignLeft" = " ";
+
+/* No comment provided by engineer. */
+"CLTextTool_MenuItemAlignRight" = " ";
+
+/* No comment provided by engineer. */
+"CLTextTool_MenuItemColor" = "颜色";
+
+/* No comment provided by engineer. */
+"CLTextTool_MenuItemFont" = "字体";
+
+/* No comment provided by engineer. */
+"CLTextTool_MenuItemNew" = "新建";
+
+/* No comment provided by engineer. */
+"CLTextTool_MenuItemText" = "文本";
+
+/* No comment provided by engineer. */
+"CLToneCurveTool_DefaultTitle" = "色调曲线";
+

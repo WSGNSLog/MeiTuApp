@@ -1,0 +1,166 @@
+
+/* No comment provided by engineer. */
+"CLAdjustmentTool_DefaultTitle" = "Adjustment";
+
+/* No comment provided by engineer. */
+"CLBloomEffect_DefaultTitle" = "Bloom";
+
+/* No comment provided by engineer. */
+"CLBlurEffect_DefaultTitle" = "Blur";
+
+/* No comment provided by engineer. */
+"CLBlurEffect_MenuItemBand" = "Band";
+
+/* No comment provided by engineer. */
+"CLBlurEffect_MenuItemCircle" = "Circle";
+
+/* No comment provided by engineer. */
+"CLBlurEffect_MenuItemNormal" = "Normal";
+
+/* No comment provided by engineer. */
+"CLClippingTool_DefaultTitle" = "Clipping";
+
+/* No comment provided by engineer. */
+"CLClippingTool_ItemMenuCustom" = "Custom";
+
+/* No comment provided by engineer. */
+"CLDefaultChromeFilter_DefaultTitle" = "Chrome";
+
+/* No comment provided by engineer. */
+"CLDefaultCurveFilter_DefaultTitle" = "Curve";
+
+/* No comment provided by engineer. */
+"CLDefaultEmptyFilter_DefaultTitle" = "Empty";
+
+/* No comment provided by engineer. */
+"CLDefaultFadeFilter_DefaultTitle" = "Fade";
+
+/* No comment provided by engineer. */
+"CLDefaultInstantFilter_DefaultTitle" = "Instant";
+
+/* No comment provided by engineer. */
+"CLDefaultInvertFilter_DefaultTitle" = "Invert";
+
+/* No comment provided by engineer. */
+"CLDefaultLinearFilter_DefaultTitle" = "Linear";
+
+/* No comment provided by engineer. */
+"CLDefaultMonoFilter_DefaultTitle" = "Mono";
+
+/* No comment provided by engineer. */
+"CLDefaultNoirFilter_DefaultTitle" = "Noir";
+
+/* No comment provided by engineer. */
+"CLDefaultProcessFilter_DefaultTitle" = "Process";
+
+/* No comment provided by engineer. */
+"CLDefaultSepiaFilter_DefaultTitle" = "Sepia";
+
+/* No comment provided by engineer. */
+"CLDefaultTonalFilter_DefaultTitle" = "Tonal";
+
+/* No comment provided by engineer. */
+"CLDefaultTransferFilter_DefaultTitle" = "Transfer";
+
+/* No comment provided by engineer. */
+"CLDefaultVignetteFilter_DefaultTitle" = "Vignette";
+
+/* No comment provided by engineer. */
+"CLDrawTool_DefaultTitle" = "Draw";
+
+/* No comment provided by engineer. */
+"CLEffectBase_DefaultTitle" = "Base";
+
+/* No comment provided by engineer. */
+"CLEffectTool_DefaultTitle" = "Effect";
+
+/* No comment provided by engineer. */
+"CLFilterTool_DefaultTitle" = "Filter";
+
+/* No comment provided by engineer. */
+"CLGloomEffect_DefaultTitle" = "Gloom";
+
+/* No comment provided by engineer. */
+"CLHighlightSadowEffect_DefaultTitle" = "Highlight";
+
+/* No comment provided by engineer. */
+"CLHueEffect_DefaultTitle" = "Hue";
+
+/* No comment provided by engineer. */
+"CLImageEditor_BackBtnTitle" = "Back";
+
+/* No comment provided by engineer. */
+"CLImageEditor_DefaultTitle" = "Edit";
+
+/* No comment provided by engineer. */
+"CLImageEditor_OKBtnTitle" = "确定";
+
+/* No comment provided by engineer. */
+"CLPixellateEffect_DefaultTitle" = "Pixellate";
+
+/* No comment provided by engineer. */
+"CLPosterizeEffect_DefaultTitle" = "Posterize";
+
+/* No comment provided by engineer. */
+"CLResizeTool_DefaultTitle" = "调整";
+
+/* No comment provided by engineer. */
+"CLResizeTool_InfoPanelTextNewSize" = "新图片尺寸:";
+
+/* No comment provided by engineer. */
+"CLResizeTool_InfoPanelTextOriginalSize" = "原图片尺寸:";
+
+/* No comment provided by engineer. */
+"CLRotateTool_DefaultTitle" = "Rotate";
+
+/* No comment provided by engineer. */
+"CLRotateTool_MenuItemFlipTitle1" = " ";
+
+/* No comment provided by engineer. */
+"CLRotateTool_MenuItemFlipTitle2" = " ";
+
+/* No comment provided by engineer. */
+"CLRotateTool_MenuItemRotateTitle" = " ";
+
+/* No comment provided by engineer. */
+"CLSplashTool_DefaultTitle" = "Splash";
+
+/* No comment provided by engineer. */
+"CLSpotEffect_DefaultTitle" = "Spot";
+
+/* No comment provided by engineer. */
+"CLStickerTool_DefaultTitle" = "Sticker";
+
+/* No comment provided by engineer. */
+"CLEmoticonTool_DefaultTitle" = "Emoticon";
+
+/* No comment provided by engineer. */
+"CLTextTool_DefaultTitle" = "Text";
+
+/* No comment provided by engineer. */
+"CLTextTool_EmptyText" = "Text";
+
+/* No comment provided by engineer. */
+"CLTextTool_MenuItemAlignCenter" = " ";
+
+/* No comment provided by engineer. */
+"CLTextTool_MenuItemAlignLeft" = " ";
+
+/* No comment provided by engineer. */
+"CLTextTool_MenuItemAlignRight" = " ";
+
+/* No comment provided by engineer. */
+"CLTextTool_MenuItemColor" = "Color";
+
+/* No comment provided by engineer. */
+"CLTextTool_MenuItemFont" = "Font";
+
+/* No comment provided by engineer. */
+"CLTextTool_MenuItemNew" = "New";
+
+/* No comment provided by engineer. */
+"CLTextTool_MenuItemText" = "Text";
+
+/* No comment provided by engineer. */
+"CLToneCurveTool_DefaultTitle" = "ToneCurve";
+
