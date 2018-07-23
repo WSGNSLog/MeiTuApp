@@ -16,6 +16,7 @@
 #import "EffectController.h"
 #import "BlurFocusController.h"
 #import "AjustController.h"
+#import "DrawController.h"
 
 #define BottomViewHeight 120
 #define CellMargin 5
@@ -172,10 +173,19 @@ static NSString *const cellID = @"FuncOptionCell";
         }
             break;
         case 4:
-        {}
+        {
+            
+        }
             break;
         case 5:
-        {}
+        {
+            DrawController *draw = [[DrawController alloc]init];
+            draw.showImage = self.photoImageV.image;
+            draw.imageBlock = ^(UIImage *image) {
+                weakSelf.photoImageV.image = image;
+            };
+            [self presentViewController:draw animated:YES completion:nil];
+        }
             break;
         case 6:
         {}

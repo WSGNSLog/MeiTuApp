@@ -50,6 +50,19 @@
 		E39A577C20FF30560018D5B5 /* FilterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E39A577A20FF30560018D5B5 /* FilterController.xib */; };
 		E39A579020FF3E140018D5B5 /* LocalizableTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E39A578F20FF3E140018D5B5 /* LocalizableTool.m */; };
 		E39A579B21002D4C0018D5B5 /* PhotoEditor.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E39A579A21002D4C0018D5B5 /* PhotoEditor.bundle */; };
+		E3B24B902101D11900630A9E /* TextTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B24B8F2101D11900630A9E /* TextTool.m */; };
+		E3B24B932101D12700630A9E /* CropTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B24B922101D12700630A9E /* CropTool.m */; };
+		E3B24B962101D13200630A9E /* DrawTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B24B952101D13200630A9E /* DrawTool.m */; };
+		E3B24B992101D13F00630A9E /* RotateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B24B982101D13F00630A9E /* RotateTool.m */; };
+		E3B24B9C2101D14C00630A9E /* ResizeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B24B9B2101D14C00630A9E /* ResizeTool.m */; };
+		E3B24B9F2101D15600630A9E /* SplashTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B24B9E2101D15600630A9E /* SplashTool.m */; };
+		E3B24BA22101D16900630A9E /* ToneCurvesTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B24BA12101D16900630A9E /* ToneCurvesTool.m */; };
+		E3B24BA52101D17300630A9E /* Emotions.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B24BA42101D17300630A9E /* Emotions.m */; };
+		E3B24BA82101D18300630A9E /* StickerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B24BA72101D18300630A9E /* StickerTool.m */; };
+		E3B24BAC2101D5B400630A9E /* CropController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B24BAA2101D5B400630A9E /* CropController.m */; };
+		E3B24BAD2101D5B400630A9E /* CropController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3B24BAB2101D5B400630A9E /* CropController.xib */; };
+		E3B24BB12101D6C800630A9E /* DrawController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B24BAF2101D6C800630A9E /* DrawController.m */; };
+		E3B24BB22101D6C800630A9E /* DrawController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3B24BB02101D6C800630A9E /* DrawController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,6 +138,30 @@
 		E39A578E20FF3E140018D5B5 /* LocalizableTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalizableTool.h; sourceTree = "<group>"; };
 		E39A578F20FF3E140018D5B5 /* LocalizableTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalizableTool.m; sourceTree = "<group>"; };
 		E39A579A21002D4C0018D5B5 /* PhotoEditor.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PhotoEditor.bundle; sourceTree = "<group>"; };
+		E3B24B8E2101D11900630A9E /* TextTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextTool.h; sourceTree = "<group>"; };
+		E3B24B8F2101D11900630A9E /* TextTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextTool.m; sourceTree = "<group>"; };
+		E3B24B912101D12700630A9E /* CropTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CropTool.h; sourceTree = "<group>"; };
+		E3B24B922101D12700630A9E /* CropTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CropTool.m; sourceTree = "<group>"; };
+		E3B24B942101D13200630A9E /* DrawTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawTool.h; sourceTree = "<group>"; };
+		E3B24B952101D13200630A9E /* DrawTool.m */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.c.objc; path = DrawTool.m; sourceTree = "<group>"; };
+		E3B24B972101D13F00630A9E /* RotateTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RotateTool.h; sourceTree = "<group>"; };
+		E3B24B982101D13F00630A9E /* RotateTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RotateTool.m; sourceTree = "<group>"; };
+		E3B24B9A2101D14C00630A9E /* ResizeTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResizeTool.h; sourceTree = "<group>"; };
+		E3B24B9B2101D14C00630A9E /* ResizeTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResizeTool.m; sourceTree = "<group>"; };
+		E3B24B9D2101D15600630A9E /* SplashTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashTool.h; sourceTree = "<group>"; };
+		E3B24B9E2101D15600630A9E /* SplashTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashTool.m; sourceTree = "<group>"; };
+		E3B24BA02101D16900630A9E /* ToneCurvesTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToneCurvesTool.h; sourceTree = "<group>"; };
+		E3B24BA12101D16900630A9E /* ToneCurvesTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToneCurvesTool.m; sourceTree = "<group>"; };
+		E3B24BA32101D17300630A9E /* Emotions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Emotions.h; sourceTree = "<group>"; };
+		E3B24BA42101D17300630A9E /* Emotions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Emotions.m; sourceTree = "<group>"; };
+		E3B24BA62101D18300630A9E /* StickerTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StickerTool.h; sourceTree = "<group>"; };
+		E3B24BA72101D18300630A9E /* StickerTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StickerTool.m; sourceTree = "<group>"; };
+		E3B24BA92101D5B400630A9E /* CropController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CropController.h; sourceTree = "<group>"; };
+		E3B24BAA2101D5B400630A9E /* CropController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CropController.m; sourceTree = "<group>"; };
+		E3B24BAB2101D5B400630A9E /* CropController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CropController.xib; sourceTree = "<group>"; };
+		E3B24BAE2101D6C800630A9E /* DrawController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawController.h; sourceTree = "<group>"; };
+		E3B24BAF2101D6C800630A9E /* DrawController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawController.m; sourceTree = "<group>"; };
+		E3B24BB02101D6C800630A9E /* DrawController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +304,8 @@
 		E385EE212101C81600123467 /* DrawTool */ = {
 			isa = PBXGroup;
 			children = (
+				E3B24B942101D13200630A9E /* DrawTool.h */,
+				E3B24B952101D13200630A9E /* DrawTool.m */,
 			);
 			path = DrawTool;
 			sourceTree = "<group>";
@@ -454,7 +493,6 @@
 			isa = PBXGroup;
 			children = (
 				E39A574320FF16030018D5B5 /* Controller */,
-				E39A574420FF16030018D5B5 /* Model */,
 				E39A574520FF16030018D5B5 /* View */,
 			);
 			path = ToneCurves;
@@ -465,13 +503,6 @@
 			children = (
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		E39A574420FF16030018D5B5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		E39A574520FF16030018D5B5 /* View */ = {
@@ -485,7 +516,6 @@
 			isa = PBXGroup;
 			children = (
 				E39A574720FF16080018D5B5 /* Controller */,
-				E39A574820FF16080018D5B5 /* Model */,
 				E39A574920FF16080018D5B5 /* View */,
 			);
 			path = Resize;
@@ -496,13 +526,6 @@
 			children = (
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		E39A574820FF16080018D5B5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		E39A574920FF16080018D5B5 /* View */ = {
@@ -516,7 +539,6 @@
 			isa = PBXGroup;
 			children = (
 				E39A574B20FF160E0018D5B5 /* Controller */,
-				E39A574C20FF160E0018D5B5 /* Model */,
 				E39A574D20FF160E0018D5B5 /* View */,
 			);
 			path = Crop;
@@ -525,15 +547,11 @@
 		E39A574B20FF160E0018D5B5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E3B24BA92101D5B400630A9E /* CropController.h */,
+				E3B24BAA2101D5B400630A9E /* CropController.m */,
+				E3B24BAB2101D5B400630A9E /* CropController.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		E39A574C20FF160E0018D5B5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		E39A574D20FF160E0018D5B5 /* View */ = {
@@ -578,7 +596,6 @@
 			isa = PBXGroup;
 			children = (
 				E39A575320FF16210018D5B5 /* Controller */,
-				E39A575420FF16210018D5B5 /* Model */,
 				E39A575520FF16210018D5B5 /* View */,
 			);
 			path = Draw;
@@ -587,15 +604,11 @@
 		E39A575320FF16210018D5B5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E3B24BAE2101D6C800630A9E /* DrawController.h */,
+				E3B24BAF2101D6C800630A9E /* DrawController.m */,
+				E3B24BB02101D6C800630A9E /* DrawController.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		E39A575420FF16210018D5B5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		E39A575520FF16210018D5B5 /* View */ = {
@@ -609,7 +622,6 @@
 			isa = PBXGroup;
 			children = (
 				E39A575720FF16290018D5B5 /* Controller */,
-				E39A575820FF16290018D5B5 /* Model */,
 				E39A575920FF16290018D5B5 /* View */,
 			);
 			path = Rotate;
@@ -620,13 +632,6 @@
 			children = (
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		E39A575820FF16290018D5B5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		E39A575920FF16290018D5B5 /* View */ = {
@@ -815,6 +820,8 @@
 		E3B24B852101C92D00630A9E /* RotateTool */ = {
 			isa = PBXGroup;
 			children = (
+				E3B24B972101D13F00630A9E /* RotateTool.h */,
+				E3B24B982101D13F00630A9E /* RotateTool.m */,
 			);
 			path = RotateTool;
 			sourceTree = "<group>";
@@ -822,6 +829,8 @@
 		E3B24B862101C93500630A9E /* CropTool */ = {
 			isa = PBXGroup;
 			children = (
+				E3B24B912101D12700630A9E /* CropTool.h */,
+				E3B24B922101D12700630A9E /* CropTool.m */,
 			);
 			path = CropTool;
 			sourceTree = "<group>";
@@ -829,6 +838,8 @@
 		E3B24B872101C93D00630A9E /* ResizeTool */ = {
 			isa = PBXGroup;
 			children = (
+				E3B24B9A2101D14C00630A9E /* ResizeTool.h */,
+				E3B24B9B2101D14C00630A9E /* ResizeTool.m */,
 			);
 			path = ResizeTool;
 			sourceTree = "<group>";
@@ -836,6 +847,8 @@
 		E3B24B882101C95500630A9E /* SplashTool */ = {
 			isa = PBXGroup;
 			children = (
+				E3B24B9D2101D15600630A9E /* SplashTool.h */,
+				E3B24B9E2101D15600630A9E /* SplashTool.m */,
 			);
 			path = SplashTool;
 			sourceTree = "<group>";
@@ -843,6 +856,8 @@
 		E3B24B892101C95E00630A9E /* ToneCurves */ = {
 			isa = PBXGroup;
 			children = (
+				E3B24BA02101D16900630A9E /* ToneCurvesTool.h */,
+				E3B24BA12101D16900630A9E /* ToneCurvesTool.m */,
 			);
 			path = ToneCurves;
 			sourceTree = "<group>";
@@ -850,6 +865,8 @@
 		E3B24B8A2101C97B00630A9E /* Emotions */ = {
 			isa = PBXGroup;
 			children = (
+				E3B24BA32101D17300630A9E /* Emotions.h */,
+				E3B24BA42101D17300630A9E /* Emotions.m */,
 			);
 			path = Emotions;
 			sourceTree = "<group>";
@@ -857,6 +874,8 @@
 		E3B24B8B2101C98300630A9E /* Sticker */ = {
 			isa = PBXGroup;
 			children = (
+				E3B24BA62101D18300630A9E /* StickerTool.h */,
+				E3B24BA72101D18300630A9E /* StickerTool.m */,
 			);
 			path = Sticker;
 			sourceTree = "<group>";
@@ -864,6 +883,8 @@
 		E3B24B8C2101C98A00630A9E /* Text */ = {
 			isa = PBXGroup;
 			children = (
+				E3B24B8E2101D11900630A9E /* TextTool.h */,
+				E3B24B8F2101D11900630A9E /* TextTool.m */,
 			);
 			path = Text;
 			sourceTree = "<group>";
@@ -932,11 +953,13 @@
 				E39A571E20FF12510018D5B5 /* Assets.xcassets in Resources */,
 				E385EDDB2100687200123467 /* BaseController.xib in Resources */,
 				E39A579B21002D4C0018D5B5 /* PhotoEditor.bundle in Resources */,
+				E3B24BAD2101D5B400630A9E /* CropController.xib in Resources */,
 				E385EE12210175E200123467 /* BlurFocusController.xib in Resources */,
 				E39A577220FF2B5C0018D5B5 /* FunctionOptionCell.xib in Resources */,
 				E385EE1B2101915D00123467 /* AjustController.xib in Resources */,
 				E39A571C20FF12510018D5B5 /* Main.storyboard in Resources */,
 				E385EDD5210065C100123467 /* EffectController.xib in Resources */,
+				E3B24BB22101D6C800630A9E /* DrawController.xib in Resources */,
 				E39A577720FF2FE70018D5B5 /* FilterCell.xib in Resources */,
 				E385EDE02100696400123467 /* BaseImgAndLabelCell.xib in Resources */,
 			);
@@ -958,22 +981,33 @@
 				E39A577B20FF30560018D5B5 /* FilterController.m in Sources */,
 				E385EDF021007E7200123467 /* GloomEffect.m in Sources */,
 				E39A577620FF2FE70018D5B5 /* FilterCell.m in Sources */,
+				E3B24B962101D13200630A9E /* DrawTool.m in Sources */,
+				E3B24BAC2101D5B400630A9E /* CropController.m in Sources */,
+				E3B24BA52101D17300630A9E /* Emotions.m in Sources */,
+				E3B24B9F2101D15600630A9E /* SplashTool.m in Sources */,
 				E33A675221002EBA0005C808 /* FilterTool.m in Sources */,
 				E39A579020FF3E140018D5B5 /* LocalizableTool.m in Sources */,
 				E39A577020FF1BC20018D5B5 /* FunctionOptionCell.m in Sources */,
 				E385EDDF2100696400123467 /* BaseImgAndLabelCell.m in Sources */,
+				E3B24B932101D12700630A9E /* CropTool.m in Sources */,
 				E39A572420FF12510018D5B5 /* main.m in Sources */,
 				E385EE0B210087A200123467 /* HighlightShadowEffect.m in Sources */,
+				E3B24BA82101D18300630A9E /* StickerTool.m in Sources */,
 				E385EE202101AAAF00123467 /* AjustmentTool.m in Sources */,
 				E385EDFC21007EB600123467 /* PosterizeEffect.m in Sources */,
 				E385EDCC21003E8A00123467 /* BundleTool.m in Sources */,
 				E385EDD4210065C100123467 /* EffectController.m in Sources */,
 				E385EE11210175E200123467 /* BlurFocusController.m in Sources */,
 				E385EDDA2100687200123467 /* BaseController.m in Sources */,
+				E3B24B9C2101D14C00630A9E /* ResizeTool.m in Sources */,
 				E385EDFF21007EC100123467 /* SpotEffect.m in Sources */,
 				E385EE1A2101915D00123467 /* AjustController.m in Sources */,
+				E3B24BA22101D16900630A9E /* ToneCurvesTool.m in Sources */,
+				E3B24B992101D13F00630A9E /* RotateTool.m in Sources */,
 				E385EDF621007E9500123467 /* HueEffect.m in Sources */,
+				E3B24B902101D11900630A9E /* TextTool.m in Sources */,
 				E39A571620FF12510018D5B5 /* AppDelegate.m in Sources */,
+				E3B24BB12101D6C800630A9E /* DrawController.m in Sources */,
 				E385EDE7210078E600123467 /* EffectBase.m in Sources */,
 				E385EDED21007E6800123467 /* BloomEffect.m in Sources */,
 			);

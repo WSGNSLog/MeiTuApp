@@ -12,7 +12,10 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    self.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    self.layer.borderWidth = 0.5;
+    self.layer.cornerRadius = 5;
+    self.clipsToBounds = YES;
 }
 
 @end
