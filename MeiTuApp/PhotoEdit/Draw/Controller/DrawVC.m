@@ -1,17 +1,15 @@
 //
-//  DrawTool.m
+//  DrawVC.m
 //  MeiTuApp
 //
-//  Created by shiguang on 2018/7/20.
+//  Created by shiguang on 2018/7/23.
 //  Copyright © 2018年 shiguang. All rights reserved.
 //
 
+#import "DrawVC.h"
 #import "DrawTool.h"
-static NSString* const kCLDrawToolEraserIconName = @"eraserIconAssetsName";
-
-@implementation DrawTool
+@interface DrawVC ()
 {
-    UIImageView *_drawingView;
     CGSize _originalImageSize;
     
     CGPoint _prevDraggingPosition;
@@ -21,87 +19,89 @@ static NSString* const kCLDrawToolEraserIconName = @"eraserIconAssetsName";
     UIView *_strokePreview;
     UIView *_strokePreviewBackground;
     UIImageView *_eraserIcon;
-    
-//    CLToolbarMenuItem *_colorBtn;
 }
+@property (nonatomic,weak) UIImageView *drawingView;
+@property (nonatomic,strong) DrawTool *drawTool;
+@end
 
-#pragma mark- implementation
-- (id)initWithImageEditor:(DrawVC *)editor
-{
-    self = [super init];
-    if(self){
-        self.editor = editor;
-    }
-    return self;
+@implementation DrawVC
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    CGSize imgSize = self.imageRect.size;
+    //计算涂鸦层view的frame
+    //layoutSubviews之后重新计算frame
+    self.drawingView.frame = (CGRect){(self.imageView.width-imgSize.width)/2,(self.imageView.height-imgSize.height)/2,imgSize};
+//    _originalImageSize = self.imageRect.size;
+//
+//    _menuView.frame = self.optionView.bounds;
+//    //CGAffineTransformMakeTranslation实现以初始位置为基准,在x轴方向上平移x单位,在y轴方向上平移y单位
+//    _menuView.transform = CGAffineTransformMakeTranslation(0, self.view.height-self.bottomView.top);
+//    [UIView animateWithDuration:kCLImageToolAnimationDuration
+//                     animations:^{
+//                         _menuView.transform = CGAffineTransformIdentity;
+//                     }];
+    
+    
+    CGFloat W = 70;
+    
+    _colorSlider.frame = CGRectMake(0, 0, _menuView.width - W - 20, 34);
+    _colorSlider.left = 10;
+    _colorSlider.top  = 5;
+    _colorSlider.value = 0;
+    _colorSlider.backgroundColor = [UIColor colorWithPatternImage:[self colorSliderBackground]];
+    
+    _widthSlider.frame = CGRectMake(0, 0, _colorSlider.width, 34);
+    _widthSlider.left = 10;
+    _widthSlider.top = _colorSlider.bottom + 5;
+    _widthSlider.value = 0.1;
+    _widthSlider.backgroundColor = [UIColor colorWithPatternImage:[self widthSliderBackground]];
+    
+//    _strokePreview.frame = CGRectMake(0, 0, W - 5, W - 5);
+//    _strokePreview.layer.cornerRadius = _strokePreview.height/2;
+//    _strokePreview.layer.borderWidth = 1;
+//    _strokePreview.layer.borderColor = [UIColor lightGrayColor].CGColor;
+//    _strokePreview.center = CGPointMake(_menuView.width-W/2, _menuView.height/2);
+//    _strokePreviewBackground.frame = _strokePreview.frame;
+//    _strokePreviewBackground.layer.cornerRadius = _strokePreviewBackground.height/2;
+//    _strokePreviewBackground.alpha = 0.3;
+//
+//    _eraserIcon.frame = _strokePreview.frame;
+//
+//    [self colorSliderDidChange:_colorSlider];
+//    [self widthSliderDidChange:_widthSlider];
 }
-- (void)setup
-{
-    _originalImageSize = self.editor.imageRect.size;
-    CGSize imgSize = self.editor.imageRect.size;
-    _drawingView = [[UIImageView alloc] initWithFrame:(CGRect){(self.editor.imageView.width-imgSize.width)/2,(self.editor.imageView.height-imgSize.height)/2,imgSize}];
-//    _drawingView = [[UIImageView alloc] initWithFrame:self.editor.imageView.bounds];
-    _drawingView.backgroundColor = [UIColor lightGrayColor];
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+}
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.imageView.image = self.showImage;
+    
+    self.drawTool = [[DrawTool alloc]initWithImageEditor:self];
+    
+    UIImageView *drawingView = [[UIImageView alloc] init];
+    self.imageView.userInteractionEnabled = YES;
+    self.drawingView = drawingView;
+    [self.imageView addSubview:drawingView];
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(drawingViewDidPan:)];
     panGesture.maximumNumberOfTouches = 1;
-    
     _drawingView.userInteractionEnabled = YES;
     [_drawingView addGestureRecognizer:panGesture];
     
-    [self.editor.imageView addSubview:_drawingView];
-    self.editor.imageView.userInteractionEnabled = YES;
-//    self.editor.scrollView.panGestureRecognizer.minimumNumberOfTouches = 2;
-//    self.editor.scrollView.panGestureRecognizer.delaysTouchesBegan = NO;
-//    self.editor.scrollView.pinchGestureRecognizer.delaysTouchesBegan = NO;
-   
-    _menuView = [[UIView alloc] initWithFrame:self.editor.optionView.bounds];
-    _menuView.backgroundColor = [UIColor redColor];
-    [self.editor.optionView addSubview:_menuView];
-   
+    _menuView = [[UIView alloc] init];
+    _menuView.backgroundColor = self.optionView.backgroundColor;
+    [self.optionView addSubview:_menuView];
+    
     [self setMenu];
-    
-    //FIXME:_menuView.transform
-    _menuView.transform = CGAffineTransformMakeTranslation(0, self.editor.view.height-self.editor.bottomView.top);
-    [UIView animateWithDuration:kCLImageToolAnimationDuration
-                     animations:^{
-                         self->_menuView.transform = CGAffineTransformIdentity;
-                     }];
-    
 }
-
-- (void)cleanup
-{
-    [_drawingView removeFromSuperview];
-    self.editor.imageView.userInteractionEnabled = NO;
-//    self.editor.scrollView.panGestureRecognizer.minimumNumberOfTouches = 1;
-   
-    [UIView animateWithDuration:kCLImageToolAnimationDuration
-                     animations:^{
-                         self->_menuView.transform = CGAffineTransformMakeTranslation(0, self.editor.view.height-self->_menuView.top);
-                     }
-                     completion:^(BOOL finished) {
-                         [self->_menuView removeFromSuperview];
-                     }];
+- (void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    NSLog(@"viewDidLayoutSubviews");
 }
-
-- (void)executeWithCompletionBlock:(void (^)(UIImage *, NSError *, NSDictionary *))completionBlock
-{
-    UIImage *backgroundImage = self.editor.imageView.image;
-    UIImage *foregroundImage = _drawingView.image;
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        UIImage *image = [self buildImageWithBackgroundImage:backgroundImage foregroundImage:foregroundImage];
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            completionBlock(image, nil, nil);
-        });
-    });
-}
-
-#pragma mark-
-
 - (UISlider*)defaultSliderWithWidth:(CGFloat)width
 {
-    UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake(0, 0, width, 34)];
+    UISlider *slider = [[UISlider alloc] init];
     
     [slider setMaximumTrackImage:[UIImage new] forState:UIControlStateNormal];
     [slider setMinimumTrackImage:[UIImage new] forState:UIControlStateNormal];
@@ -202,19 +202,27 @@ static NSString* const kCLDrawToolEraserIconName = @"eraserIconAssetsName";
 
 - (void)setMenu
 {
+    CGSize imgSize = self.imageRect.size;
+    //计算涂鸦层view的frame
+    self.drawingView.frame = (CGRect){(self.imageView.width-imgSize.width)/2,(self.imageView.height-imgSize.height)/2,imgSize};
+    _originalImageSize = self.imageRect.size;
+    
+    _menuView.frame = self.optionView.bounds;
+    //CGAffineTransformMakeTranslation实现以初始位置为基准,在x轴方向上平移x单位,在y轴方向上平移y单位
+    _menuView.transform = CGAffineTransformMakeTranslation(0, self.view.height-self.bottomView.top);
+    [UIView animateWithDuration:kCLImageToolAnimationDuration
+                     animations:^{
+                         _menuView.transform = CGAffineTransformIdentity;
+                     }];
     CGFloat W = 70;
     
     _colorSlider = [self defaultSliderWithWidth:_menuView.width - W - 20];
-    _colorSlider.left = 10;
-    _colorSlider.top  = 5;
     [_colorSlider addTarget:self action:@selector(colorSliderDidChange:) forControlEvents:UIControlEventValueChanged];
     _colorSlider.backgroundColor = [UIColor colorWithPatternImage:[self colorSliderBackground]];
     _colorSlider.value = 0;
     [_menuView addSubview:_colorSlider];
     
     _widthSlider = [self defaultSliderWithWidth:_colorSlider.width];
-    _widthSlider.left = 10;
-    _widthSlider.top = _colorSlider.bottom + 5;
     [_widthSlider addTarget:self action:@selector(widthSliderDidChange:) forControlEvents:UIControlEventValueChanged];
     _widthSlider.value = 0.1;
     _widthSlider.backgroundColor = [UIColor colorWithPatternImage:[self widthSliderBackground]];
@@ -317,6 +325,47 @@ static NSString* const kCLDrawToolEraserIconName = @"eraserIconAssetsName";
     UIGraphicsEndImageContext();
 }
 
+
+- (UIImage *)showingImg{
+    return self.imageView.image;
+}
+
+- (void)setShowImage:(UIImage *)showImage{
+    _showImage = showImage;
+    if (self.imageView) {
+        self.imageView.image = showImage;
+    }
+}
+
+- (IBAction)saveClick:(id)sender{
+    __weak typeof(self) weakSelf = self;
+    [self executeWithCompletionBlock:^(UIImage *image, NSError *error, NSDictionary *info) {
+        if (weakSelf.imageBlock) {
+            self.imageBlock(image);
+        }
+        [weakSelf dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
+}
+- (IBAction)cancelClick:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+- (CGRect)imageRect{
+    return AVMakeRectWithAspectRatioInsideRect(self.showImage.size, self.bgView.bounds);
+}
+- (void)executeWithCompletionBlock:(void (^)(UIImage *image, NSError *error, NSDictionary *info))completionBlock
+{
+    UIImage *backgroundImage = self.imageView.image;
+    UIImage *foregroundImage = _drawingView.image;
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        UIImage *image = [self buildImageWithBackgroundImage:backgroundImage foregroundImage:foregroundImage];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completionBlock(image, nil, nil);
+        });
+    });
+}
 - (UIImage*)buildImageWithBackgroundImage:(UIImage*)backgroundImage foregroundImage:(UIImage*)foregroundImage
 {
     UIGraphicsBeginImageContextWithOptions(_originalImageSize, NO, backgroundImage.scale);
@@ -333,4 +382,6 @@ static NSString* const kCLDrawToolEraserIconName = @"eraserIconAssetsName";
 - (void)dealloc{
     NSLog(@"%s",__func__);
 }
+
+
 @end

@@ -17,6 +17,7 @@
 #import "BlurFocusController.h"
 #import "AjustController.h"
 #import "DrawController.h"
+#import "DrawVC.h"
 
 #define BottomViewHeight 120
 #define CellMargin 5
@@ -179,7 +180,8 @@ static NSString *const cellID = @"FuncOptionCell";
             break;
         case 5:
         {
-            DrawController *draw = [[DrawController alloc]init];
+            DrawVC *draw = [[DrawVC alloc]init];
+//            DrawController *draw = [[DrawController alloc]init];
             draw.showImage = self.photoImageV.image;
             draw.imageBlock = ^(UIImage *image) {
                 weakSelf.photoImageV.image = image;

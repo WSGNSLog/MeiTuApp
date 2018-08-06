@@ -25,10 +25,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nIn-iF-zaF">
-                    <rect key="frame" x="0.0" y="547" width="375" height="120"/>
+                    <rect key="frame" x="0.0" y="537" width="375" height="130"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hH7-5H-vWB">
-                            <rect key="frame" x="0.0" y="70" width="375" height="50"/>
+                            <rect key="frame" x="0.0" y="80" width="375" height="50"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXv-SR-Yei">
                                     <rect key="frame" x="69" y="0.0" width="46" height="30"/>
@@ -60,17 +60,17 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="120" id="4zq-K3-Fe1"/>
+                        <constraint firstAttribute="height" constant="130" id="4zq-K3-Fe1"/>
                         <constraint firstAttribute="trailing" secondItem="hH7-5H-vWB" secondAttribute="trailing" id="QjG-Co-usA"/>
                         <constraint firstItem="hH7-5H-vWB" firstAttribute="leading" secondItem="nIn-iF-zaF" secondAttribute="leading" id="flV-0Y-Hwd"/>
                         <constraint firstAttribute="bottom" secondItem="hH7-5H-vWB" secondAttribute="bottom" id="oEE-PY-0LN"/>
                     </constraints>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gg9-15-CdO">
-                    <rect key="frame" x="0.0" y="20" width="375" height="527"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="537"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SX7-fe-AfY">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="527"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="537"/>
                             <color key="backgroundColor" red="0.90196078430000004" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </imageView>
                     </subviews>
@@ -89,11 +89,11 @@
             <constraints>
                 <constraint firstItem="nIn-iF-zaF" firstAttribute="top" secondItem="Gg9-15-CdO" secondAttribute="bottom" id="4nt-yb-1lP"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="nIn-iF-zaF" secondAttribute="trailing" id="5yr-rg-xNr"/>
-                <constraint firstItem="Gg9-15-CdO" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="70z-iD-ghn"/>
+                <constraint firstItem="Gg9-15-CdO" firstAttribute="leading" secondItem="nIn-iF-zaF" secondAttribute="leading" id="70z-iD-ghn"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="nIn-iF-zaF" secondAttribute="bottom" id="SQa-uK-U8j"/>
-                <constraint firstItem="Gg9-15-CdO" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="YE1-p4-aUi"/>
+                <constraint firstItem="Gg9-15-CdO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="YE1-p4-aUi"/>
                 <constraint firstItem="nIn-iF-zaF" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="evx-71-dSC"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Gg9-15-CdO" secondAttribute="trailing" id="ihu-qe-LnV"/>
+                <constraint firstAttribute="trailing" secondItem="Gg9-15-CdO" secondAttribute="trailing" id="ihu-qe-LnV"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
         </view>

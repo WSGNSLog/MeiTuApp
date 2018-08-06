@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "DrawController.h"
+#import "DrawVC.h"
 
 @interface DrawTool : NSObject
-@property (nonatomic, weak) DrawController *editor;
+@property (nonatomic, weak) DrawVC *editor;
 
 
-- (id)initWithImageEditor:(DrawController *)editor;
+- (id)initWithImageEditor:(DrawVC *)editor;
 - (void)setup;
 - (void)cleanup;
 - (void)executeWithCompletionBlock:(void(^)(UIImage *image, NSError *error, NSDictionary *userInfo))completionBlock;
